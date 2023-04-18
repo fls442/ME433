@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ME433-HW4")(type "KiCad")(uri "${KIPRJMOD}/ME433-HW4.kicad_sym")(options "")(descr ""))
+)
