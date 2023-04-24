@@ -64,7 +64,7 @@
         <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep>"C:\Users\chesk\Desktop\Important Stuff\#ME433\bootloader/nu32utility.exe" COM6 ${ImagePath}</makeCustomizationPostStep>
+        <makeCustomizationPostStep>"C:\Users\chesk\Desktop\Important Stuff\#ME 433\#ME433\bootloader" COM6 ${ImagePath}</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>

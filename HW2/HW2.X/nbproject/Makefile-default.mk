@@ -82,7 +82,7 @@ FIXDEPS=fixDeps
 _/_=\\
 ShExtension=.bat
 Device=PIC32MX170F256B
-ProjectDir="C:\Users\chesk\Desktop\Important Stuff\#ME433\HW2\HW2.X"
+ProjectDir="C:\Users\chesk\Desktop\Important Stuff\#ME 433\#ME433\HW2\HW2.X"
 ProjectName=HW2
 ConfName=default
 ImagePath="dist\default\${IMAGE_TYPE}\HW2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}"
@@ -100,8 +100,8 @@ ifneq ($(INFORMATION_MESSAGE), )
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/HW2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 	@echo "--------------------------------------"
-	@echo "User defined post-build step: ["C:\Users\chesk\Desktop\Important Stuff\#ME433\bootloader/nu32utility.exe" COM6 ${ImagePath}]"
-	@"C:\Users\chesk\Desktop\Important Stuff\#ME433\bootloader/nu32utility.exe" COM6 ${ImagePath}
+	@echo "User defined post-build step: ["C:\Users\chesk\Desktop\Important Stuff\#ME 433\#ME433\bootloader" COM6 ${ImagePath}]"
+	@"C:\Users\chesk\Desktop\Important Stuff\#ME 433\#ME433\bootloader" COM6 ${ImagePath}
 	@echo "--------------------------------------"
 
 MP_PROCESSOR_OPTION=32MX170F256B
@@ -121,26 +121,26 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/nu32dip.o: nu32dip.c  .generated_files/flags/default/c020eec2be5b5f4ca2b85ce635cc50eabc5621f5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/nu32dip.o: nu32dip.c  .generated_files/flags/default/220cb84f258105a78f659dc88440f5eece41d5a5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/nu32dip.o.d 
 	@${RM} ${OBJECTDIR}/nu32dip.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/nu32dip.o.d" -o ${OBJECTDIR}/nu32dip.o nu32dip.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/template.o: template.c  .generated_files/flags/default/6eedc20dd4f660e8cb153aba95bc585c9fa95962 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/template.o: template.c  .generated_files/flags/default/ae328f8571c6a334c1dc948594bbdb701a9565d1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/template.o.d 
 	@${RM} ${OBJECTDIR}/template.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/template.o.d" -o ${OBJECTDIR}/template.o template.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 else
-${OBJECTDIR}/nu32dip.o: nu32dip.c  .generated_files/flags/default/ccce732d0c9387c2d16f0db972bcea98e7e9baac .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/nu32dip.o: nu32dip.c  .generated_files/flags/default/d05cbc6c77b8d9be279bbe825df1671219eeb7f8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/nu32dip.o.d 
 	@${RM} ${OBJECTDIR}/nu32dip.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/nu32dip.o.d" -o ${OBJECTDIR}/nu32dip.o nu32dip.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/template.o: template.c  .generated_files/flags/default/27377d069e8addfe4141b9f13cc504d545b696a9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/template.o: template.c  .generated_files/flags/default/3bf5a901a4c44d2246001f35df50fceb16fef2eb .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/template.o.d 
 	@${RM} ${OBJECTDIR}/template.o 

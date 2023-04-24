@@ -244,7 +244,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "ME433-HW4"
+    ]
   },
   "meta": {
     "filename": "HW4.kicad_pro",
