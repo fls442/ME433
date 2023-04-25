@@ -12,6 +12,11 @@
 
 # see matplotlib animation API for more: https://matplotlib.org/stable/api/animation_api.html
 
+import sys 
+print("Python version") 
+print (sys. version) 
+print("Version info.") 
+print (sys. version_info)
 import serial
 import sys
 import matplotlib.pyplot as plt
@@ -65,7 +70,7 @@ def serial_getter():
 #    raise Exception("Ruh roh..no port specified!")
 
 # hard coded serial port name, timeout after 2 minutes
-ser = serial.Serial("COM3", 230400, timeout=120)
+ser = serial.Serial("COM6", 230400, timeout=120)
 
 fig, ax = plt.subplots()
 plotter = Plotter(ax)
