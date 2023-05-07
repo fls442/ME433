@@ -100,8 +100,8 @@ ifneq ($(INFORMATION_MESSAGE), )
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/HW2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 	@echo "--------------------------------------"
-	@echo "User defined post-build step: ["C:\Users\chesk\Desktop\Important Stuff\#ME433\bootloader" COM6 ${ImagePath}]"
-	@"C:\Users\chesk\Desktop\Important Stuff\#ME433\bootloader" COM6 ${ImagePath}
+	@echo "User defined post-build step: ["C:\Users\chesk\Desktop\Important Stuff\#ME433\bootloader/nu32utility.exe" COM6 ${ImagePath}]"
+	@"C:\Users\chesk\Desktop\Important Stuff\#ME433\bootloader/nu32utility.exe" COM6 ${ImagePath}
 	@echo "--------------------------------------"
 
 MP_PROCESSOR_OPTION=32MX170F256B
