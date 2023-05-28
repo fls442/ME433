@@ -79,7 +79,7 @@ void i2cWrite(unsigned char add, unsigned char reg, unsigned char val){
 	i2c_master_restart();       // restart bit
 	i2c_master_send(addR);      // send device reading address
 	bite = i2c_master_recv();   // bit receive function
-	i2c_master_ack();           // send ACK bit
+	i2c_master_ack(1);          // send ACK bit
 	i2c_master_stop();          // send stop bit
     return bite;
 }
@@ -89,12 +89,12 @@ void GP7on(void){
 }
 
 void GP7off(void){
-    i2cWrite(MCPread, 0x0A, 0);
+    i2cWrite(MCPwrite, 0x0A, 0b00000000);
     
 }
 
 unsigned char GP0read(void){
     unsigned char val;
-    val = i2cRead(MCPwrite, MCPread, 0x01);
-    return val
+    val = i2cRead(MCPwrite, MCPread, 0x09);
+    return val;
 }

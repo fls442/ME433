@@ -16,11 +16,12 @@ unsigned char i2c_master_recv(void); // receive a byte of data
 void i2c_master_ack(int val); // send an ACK (0) or NACK (1)
 void i2c_master_stop(void); // send a stop
 
+
 // Below are the custom functions I'm writing
 void i2cWrite(unsigned char add, unsigned char reg, unsigned char val);
 void GP7on(void);
 void GP7off(void);
-void i2cRead(unsigned char addW, unsigned char addR, unsigned char reg);
+unsigned char i2cRead(unsigned char addW, unsigned char addR, unsigned char reg);
 unsigned char GP0read(void);
 
 

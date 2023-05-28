@@ -3,22 +3,29 @@
 
 unsigned char MCPw = 0b01000000 , MCPr = 0b01000001;
 
+
 void blink(int, int); // blink the LEDs function
 void heartbeat();     // this just gonna call the blink function
 void delay(int ms);     // delay by ms miliseconds
 
 int main(void) {
-  
   NU32DIP_Startup();    // cache on, interrupts on, LED/button init, UART init
   i2c_master_setup();   // turn on ye i2c
-  // MAKE GP0 INPUT, MAKE GP7 OUTPUT
-  i2cWrite(MCPw, 0x00, 0b01111111);
-  GP7on(); 
+  i2cWrite(MCPw, 0x00, 0b01111111); // MAKE GP0 INPUT, MAKE GP7 OUTPUT
   
+// Little test sequence
+  GP7on(); 
+  delay(1000);
+  GP7off();
+  unsigned char pushed;
   
   while (1) {
+      GP7off();
       
+      pushed = GP0read();
+      int onoff = !(pushed && 0b1);
       
+      if(onoff){GP7on();}
       heartbeat();
   }
 
@@ -55,5 +62,4 @@ void delay(int ms){
 
 void heartbeat(){
     blink(1, 600);
-    delay(1000);
 }
