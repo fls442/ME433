@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=hw5testing.X
+PROJECTNAME=HW6.X
 
 # Active Configuration
 DEFAULTCONF=default

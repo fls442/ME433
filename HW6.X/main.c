@@ -1,20 +1,29 @@
 #include "nu32dip.h" // constants, functions for startup and UART
+#include "i2c.h"
+
+unsigned char MCPw = 0b01000000 , MCPr = 0b01000001;
 
 void blink(int, int); // blink the LEDs function
+void heartbeat();     // this just gonna call the blink function
+void delay(int ms);     // delay by ms miliseconds
 
 int main(void) {
-  char message[100];
   
-  NU32DIP_Startup(); // cache on, interrupts on, LED/button init, UART init
+  NU32DIP_Startup();    // cache on, interrupts on, LED/button init, UART init
+  i2c_master_setup();   // turn on ye i2c
+  // MAKE GP0 INPUT, MAKE GP7 OUTPUT
+  i2cWrite(MCPw, 0x00, 0b01111111);
+  GP7on(); 
+  
+  
   while (1) {
-    NU32DIP_ReadUART1(message, 100); // wait here until get message from computer
-    NU32DIP_WriteUART1(message); // send message back
-    NU32DIP_WriteUART1("\r\n"); // carriage return and newline
-	if (NU32DIP_USER){
-		blink(5, 500); // 5 times, 500ms each time
-	}
+      
+      
+      heartbeat();
   }
+
 }
+
 
 // blink the LEDs
 void blink(int iterations, int time_ms){
@@ -36,3 +45,15 @@ void blink(int iterations, int time_ms){
 	}
 }
 		
+void delay(int ms){
+    _CP0_SET_COUNT(0);                // set core timer counter to 0
+    int target_ticks = 24000*ms;    // 24000 ticks per ms * ms
+    while(_CP0_GET_COUNT()<target_ticks){
+        // do nothing
+    }   
+}
+
+void heartbeat(){
+    blink(1, 600);
+    delay(1000);
+}
