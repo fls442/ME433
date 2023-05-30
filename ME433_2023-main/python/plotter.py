@@ -35,7 +35,7 @@ class Plotter:
         self.line = Line2D(self.tdata, self.ydata)
 
         self.ax.add_line(self.line)
-        self.ax.set_ylim(0, 3.3)
+        self.ax.set_ylim(-2, 2)
         self.ax.set_xlim(0, self.maxt)
 
     def update(self, y):
@@ -71,7 +71,7 @@ def serial_getter():
 
 # hard coded serial port name, timeout after 2 minutes
 ser = serial.Serial("COM6", 230400, timeout=120)
-
+ser.write(b'\n')
 fig, ax = plt.subplots()
 plotter = Plotter(ax)
 
@@ -80,6 +80,6 @@ ani = animation.FuncAnimation(fig, plotter.update, serial_getter, interval=1,
 
 ax.set_xlabel("Samples")
 ax.set_ylabel("Voltage (V)")
-fig.canvas.manager.set_window_title('Plot Voltage Data [0-3.3V]')
+fig.canvas.manager.set_window_title('IMU Acceleration +/- 2g')
 fig.tight_layout()
 plt.show()
