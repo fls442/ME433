@@ -1,0 +1,18 @@
+I forgot to add the titles and stuff to the figures 
+but I had the following settings for my filters
+(also I plotted in blue/red instead of black/red oops)
+
+
+IIR--------------
+A = 0.9
+B = 0.1
+
+MAF--------------
+Averaging over 100 data points
+
+FIR--------------
+low-pass windowed-sinc FIR
+sampling rate 	- 10,000
+cutoff freq 	- 100Hz
+trans bandwidth 	- 400
+115 coefficients
