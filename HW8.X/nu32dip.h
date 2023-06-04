@@ -11,16 +11,9 @@ void NU32DIP_Startup(void);
 void NU32DIP_ReadUART1(char * string, int maxLength);
 void NU32DIP_WriteUART1(const char * string);
 
-void delay(int ms);     // delay by ms miliseconds
-void blink(int, int); // blink the LEDs function
-
-
 #define NU32DIP_DESIRED_BAUD 230400    // Baudrate for RS232
 #define NU32DIP_GREEN LATBbits.LATB4
 #define NU32DIP_YELLOW LATBbits.LATB5
 #define NU32DIP_USER PORTAbits.RA4
-
-
-
 
 #endif // NU32DIP__H__
