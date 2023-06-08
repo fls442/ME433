@@ -106,7 +106,7 @@
     )
     (symbol "PIC32-256B_1_1"
       (pin input line (at -8.89 15.24 0) (length 2.54)
-        (name "MCLR" (effects (font (size 1.27 1.27))))
+        (name "~{MCLR}" (effects (font (size 1.27 1.27))))
         (number "1" (effects (font (size 1.27 1.27))))
       )
       (pin bidirectional line (at -8.89 -7.62 0) (length 2.54)
